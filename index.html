@@ -3,81 +3,80 @@
     <head>
         <title>Endangered Languages</title>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles.css" />
         <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
         <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
         <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
     </head>
     <body>
-        <section class="wrapper">
-            <section class="landingContainer">
-                <h1 class="title">Endangered Languages Worldwide</h1>
-                <p class="heading-para">Languages are one of the most important expressions of cultural identity. When a language dies out, the cultural values and traditions of the former speakers are at risk of being erased from history. How common are endangered languages across the globe?</p>    
-                <section class="scrollContainer">
-                    <div class="scrollBreak"></div>
-                    <p class="scrollPrompt">Scroll to find out more</p>
-                    <span class="scrollArrow"></span>
-                </section>
+        <section class="landing">
+            <section class="landing__title--container">
+                <h1 class="landing__title">Endangered Languages</h1>
+                <p class="landing__subtitle">Languages are one of the most important expressions of cultural identity. When a language dies out, the cultural values and traditions of the former speakers are at risk of being erased from history. How common are endangered languages across the globe?</p>    
             </section>
-            <div class="gradient"></div>
-            <section class="definitionContainer">
-                <h1 class="definitionHeading">UNESCO defines five main categories of language endangerment:</h1>
-                <div class="gridContainer">
-                    <div class="grid">
+            <img src="./assets/speech.svg" alt="People speaking" class="landing__img"/>
+           <section class="landing__scroll--container">
+                <p class="landing__scroll--text">Scroll to find out more</p>
+                <span class="landing__scroll--arrow"></span>
+            </section>
+        </section>
+
+        <section class="definitions">
+            <section class="definitions__container">
+                <h1 class="definitions__title">UNESCO defines five main categories of language endangerment:</h1>
+                <div class="definitions__circles">
+                    <div class="definitions__circles--figure">
                         <span class="circle vulnerable"></span>
                         <p class="gridHeading">Vulnerable</p>
                         <p class="gridDefinition">Most children speak the language, but it may be restricted to certain domains (e.g., home).</p>
                     </div>
-                    <div class="grid">
+                    <div class="definitions__circles--figure">
                         <span class="circle definitely"></span>
                         <p class="gridHeading">Definitely Endangered</p>
                         <p class="gridDefinition">Children no longer learn the language as a 'mother tongue' in the home.</p>
                     </div>
-                    <div class="grid">
+                    <div class="definitions__circles--figure">
                         <span class="circle severely"></span>
                         <p class="gridHeading">Severely Endangered</p>
                         <p class="gridDefinition">The language is spoken by grandparents and older generations; while the parent generation may understand it, they do not speak it to children or among themselves.</p>
                     </div>
-                    <div class="grid">
+                    <div class="definitions__circles--figure">
                         <span class="circle critically"></span>
                         <p class="gridHeading">Critically Endangered</p>
                         <p class="gridDefinition">The youngest speakers are grandparents and older, and they speak the language partially and infrequently.</p>
                     </div>
-                    <div class="grid">
+                    <div class="definitions__circles--figure">
                         <span class="circle extinct"></span>
                         <p class="gridHeading">Extinct</p>
                         <p class="gridDefinition">The language has no speakers left.</p>
                     </div>
                 </div>
-                <div class="scrollContainer">
-                    <span class="scrollArrow"></span>
-                </div>
             </section>
-            <section class="visualisationContainer">
-                <h1 class="visualisationHeading">Now that we understand language endangerment, lets take a look at how it stands globally.</h1>
-                <section class="map1container">
-                    <figure class="map1"></figure>
-                    <p class="map1text">This visualisation shows the distribution of endangered languages across the world and their level of endangerment. The map shows large clusters of languages particularly in Europe, as well as India and Central and South America.</p>    
-                </section>
-                <section class="map2container">
-                    <p class="map2text">Intuitively, the less speakers of a language, the more endangered it is. Therefore, less endangered languages were overrepresented by their size in the previous visualisation. This visualisation remedies that by excluding the speaker count for each language, allowing us to see the spread of endangered languages more clearly.</p>    
-                    <figure class="map4"></figure>
-                </section>
-                <section class="map1container">
-                    <figure class="map3"></figure>
-                    <p class="map1text">This bar chart shows the severity of endangerment that languages face across the world. Unfortunately, there are still a very large amount of languages that are critically endangered, meaning these languages face the threat of imminent exctinction.</p>    
-                </section>
-                <section class="map2container">
-                    <p class="map2text">From the map we can observe that the United States has the largest amount of endangerment with 227 recorded languages, followed by India with 199 and Brazil with 190. These countries all share large land-mass and enormous linguistic diversity, making them more susceptible to language endangerment.</p>    
-                    <figure class="map2"></figure>
-                </section>
-            </section>
-            <div class="gradient2"></div>
-            <section class="footerContainer">
-                <h1 class="footerHeading">What does all this mean?</h1>
-                <p class="footer-para">Unfortunately, a large amount of languages today face the imminent threat of exctinction, and its only likely to get worse. It is difficult to put a finger on exactly one reason for why languages die - instead, it can be a result of many different factors such as linguistic evolution or colonisation. When these languages die, the cultures of their former speakers also risk dying out too. Therefore, it is important that we try to capture what remains of these languages before they become the remnants of a culture lost to time.</p>
-            </section>
+        </section>
 
+        <section class="visualisation">
+            <h1 class="visualisation__title">Now that we understand language endangerment, lets take a look at how it stands globally.</h1>
+            <section class="visualisation__one--container">
+                <figure class="map1 visualisation__one--figure"></figure>
+                <p class="visualisation__one--text">This visualisation shows the distribution of endangered languages across the world and their level of endangerment. The map shows large clusters of languages particularly in Europe, as well as India and Central and South America.</p>    
+            </section>
+            <section class="visualisation__two--container">
+                <p class="visualisation__two--text">Intuitively, the less speakers of a language, the more endangered it is. Therefore, less endangered languages were overrepresented by their size in the previous visualisation. This visualisation remedies that by excluding the speaker count for each language, allowing us to see the spread of endangered languages more clearly.</p>    
+                <figure class="map4 visualisation__two--figure"></figure>
+            </section>
+            <section class="visualisation__three--container">
+                <figure class="map3 visualisation__three--figure"></figure>
+                <p class="visualisation__three--text">This bar chart shows the severity of endangerment that languages face across the world. Unfortunately, there are still a very large amount of languages that are critically endangered, meaning these languages face the threat of imminent exctinction.</p>    
+            </section>
+            <section class="visualisation__four--container">
+                <p class="visualisation__four--text">From the map we can observe that the United States has the largest amount of endangerment with 227 recorded languages, followed by India with 199 and Brazil with 190. These countries all share large land-mass and enormous linguistic diversity, making them more susceptible to language endangerment.</p>    
+                <figure class="map2 visualisation__four--figure"></figure>
+            </section>
+        </section>
+        <section class="footerContainer">
+            <h1 class="footerHeading">What does all this mean?</h1>
+            <p class="footer-para">Unfortunately, a large amount of languages today face the imminent threat of exctinction, and its only likely to get worse. It is difficult to put a finger on exactly one reason for why languages die - instead, it can be a result of many different factors such as linguistic evolution or colonisation. When these languages die, the cultures of their former speakers also risk dying out too. Therefore, it is important that we try to capture what remains of these languages before they become the remnants of a culture lost to time.</p>
         </section>
     </body>
     <script>

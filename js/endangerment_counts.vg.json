@@ -4,7 +4,7 @@
   "width": 960,
   "height": 540,
   "data": {
-    "url": "https://raw.githubusercontent.com/jack-white9/data-visualisation-2/main/data/endangerment_counts.csv"
+    "url": "https://raw.githubusercontent.com/jack-white9/endangered-languages/main/data/endangerment_counts.csv"
   },
   "mark": "bar",
   "encoding": {
