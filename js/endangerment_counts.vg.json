@@ -1,0 +1,29 @@
+{
+  "$sschema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": "Number of Languages Facing Endangerment"},
+  "width": 960,
+  "height": 540,
+  "data": {
+    "url": "https://raw.githubusercontent.com/jack-white9/data-visualisation-2/main/data/endangerment_counts.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": 
+      {
+        "field": "endangerment", 
+        "type": "ordinal", 
+        "sort": ["Definitely endangered", "Vulnerable", "Critically endangered", "Severely endangered", "Exctint"],
+        "axis": {"labelAngle": 0},
+        "title": "Endangerment"
+      }, 
+    "y": 
+      {
+        "field": "n", "type": "quantitative",
+        "title": "Count"
+      },
+    "color": {
+      "value": "#fdb3a1"
+    }
+  }
+}
+  

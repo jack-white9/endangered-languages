@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Endangered Languages</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="./styles.css" />
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    </head>
+    <body>
+        <section class="wrapper">
+            <section class="landingContainer">
+                <h1 class="title">Endangered Languages Worldwide</h1>
+                <p class="heading-para">Languages are one of the most important expressions of cultural identity. When a language dies out, the cultural values and traditions of the former speakers are at risk of being erased from history. How common are endangered languages across the globe?</p>    
+                <section class="scrollContainer">
+                    <div class="scrollBreak"></div>
+                    <p class="scrollPrompt">Scroll to find out more</p>
+                    <span class="scrollArrow"></span>
+                </section>
+            </section>
+            <div class="gradient"></div>
+            <section class="definitionContainer">
+                <h1 class="definitionHeading">UNESCO defines five main categories of language endangerment:</h1>
+                <div class="gridContainer">
+                    <div class="grid">
+                        <span class="circle vulnerable"></span>
+                        <p class="gridHeading">Vulnerable</p>
+                        <p class="gridDefinition">Most children speak the language, but it may be restricted to certain domains (e.g., home).</p>
+                    </div>
+                    <div class="grid">
+                        <span class="circle definitely"></span>
+                        <p class="gridHeading">Definitely Endangered</p>
+                        <p class="gridDefinition">Children no longer learn the language as a 'mother tongue' in the home.</p>
+                    </div>
+                    <div class="grid">
+                        <span class="circle severely"></span>
+                        <p class="gridHeading">Severely Endangered</p>
+                        <p class="gridDefinition">The language is spoken by grandparents and older generations; while the parent generation may understand it, they do not speak it to children or among themselves.</p>
+                    </div>
+                    <div class="grid">
+                        <span class="circle critically"></span>
+                        <p class="gridHeading">Critically Endangered</p>
+                        <p class="gridDefinition">The youngest speakers are grandparents and older, and they speak the language partially and infrequently.</p>
+                    </div>
+                    <div class="grid">
+                        <span class="circle extinct"></span>
+                        <p class="gridHeading">Extinct</p>
+                        <p class="gridDefinition">The language has no speakers left.</p>
+                    </div>
+                </div>
+                <div class="scrollContainer">
+                    <span class="scrollArrow"></span>
+                </div>
+            </section>
+            <section class="visualisationContainer">
+                <h1 class="visualisationHeading">Now that we understand language endangerment, lets take a look at how it stands globally.</h1>
+                <section class="map1container">
+                    <figure class="map1"></figure>
+                    <p class="map1text">This visualisation shows the distribution of endangered languages across the world and their level of endangerment. The map shows large clusters of languages particularly in Europe, as well as India and Central and South America.</p>    
+                </section>
+                <section class="map2container">
+                    <p class="map2text">Intuitively, the less speakers of a language, the more endangered it is. Therefore, less endangered languages were overrepresented by their size in the previous visualisation. This visualisation remedies that by excluding the speaker count for each language, allowing us to see the spread of endangered languages more clearly.</p>    
+                    <figure class="map4"></figure>
+                </section>
+                <section class="map1container">
+                    <figure class="map3"></figure>
+                    <p class="map1text">This bar chart shows the severity of endangerment that languages face across the world. Unfortunately, there are still a very large amount of languages that are critically endangered, meaning these languages face the threat of imminent exctinction.</p>    
+                </section>
+                <section class="map2container">
+                    <p class="map2text">From the map we can observe that the United States has the largest amount of endangerment with 227 recorded languages, followed by India with 199 and Brazil with 190. These countries all share large land-mass and enormous linguistic diversity, making them more susceptible to language endangerment.</p>    
+                    <figure class="map2"></figure>
+                </section>
+            </section>
+            <div class="gradient2"></div>
+            <section class="footerContainer">
+                <h1 class="footerHeading">What does all this mean?</h1>
+                <p class="footer-para">Unfortunately, a large amount of languages today face the imminent threat of exctinction, and its only likely to get worse. It is difficult to put a finger on exactly one reason for why languages die - instead, it can be a result of many different factors such as linguistic evolution or colonisation. When these languages die, the cultures of their former speakers also risk dying out too. Therefore, it is important that we try to capture what remains of these languages before they become the remnants of a culture lost to time.</p>
+            </section>
+
+        </section>
+    </body>
+    <script>
+        let vega1 = './js/language_map.vg.json';
+        vegaEmbed('.map1', vega1, { "actions": false });
+
+        let vega2 = './js/interactive_map.vg.json';
+        vegaEmbed('.map2', vega2, { "actions": false });
+
+        let vega3 = './js/endangerment_counts.vg.json';
+        vegaEmbed('.map3', vega3, { "actions": false });
+
+        let vega4 = './js/language_map_2.vg.json';
+        vegaEmbed('.map4', vega4, { "actions": false });
+    </script>
+</html>
